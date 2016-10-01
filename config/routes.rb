@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reviews, except: [:show, :index]
+  
   resources :reviews
   resources :restaurants
   get 'pages/about'
