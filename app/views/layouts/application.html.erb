@@ -2,25 +2,17 @@
 <html>
 <head>
   <title>ESRP Lunch Break</title>
+  <%= render 'layouts/bootstrap' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <%= render 'layouts/bootstrap' %>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <%= render 'layouts/navbar' %>
-  <div class="container-fluid">.
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-  </div>
+  <div class="container-fluid">
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</div>
 </body>
 </html>
