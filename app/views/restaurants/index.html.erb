@@ -21,10 +21,10 @@ Don't forget to leave reviews and ratings for your fellow foodies.
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= link_to restaurant.name, restaurant %></td>
+        <td><%= restaurant.name %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone %></td>
-        <td><%= link_to restaurant.website, restaurant.website %></td>
+        <td><%= restaurant.website %></td>
         <td><%= link_to 'Show', restaurant, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></td>
       </tr>
