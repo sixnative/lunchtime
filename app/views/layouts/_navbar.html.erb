@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-link" %></li>
+        <li style="margin-left:50%;box-shadow: 0 4px 8px 0 rgba(172, 194, 116, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)"><%= link_to 'Add New Restaurant', new_restaurant_path, class: "btn btn-link" %></li>
         <li></li>
       </ul>
       <%= form_tag search_restaurants_path, method: :get, class: "navbar-form navbar-right" do %>
