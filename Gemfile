@@ -48,3 +48,5 @@ gem 'figaro'
 gem 'mini_magick'
 
 gem 'searchkick'
+
+gem 'jquery-sliders-rails'

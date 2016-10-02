@@ -7,6 +7,24 @@ Don't forget to leave reviews and ratings for your fellow foodies.
 </h3>
 </div>
 
+<div id="slideshow" class="sliders" style:"clear:both;">
+  <div class="active-slide slide">
+    <%= image_tag "https://s3.amazonaws.com/esrplunchtime/sliders/RyansRestaurant.jpg" %>
+  </div>
+  <div class="slide">
+    <%= image_tag "https://s3.amazonaws.com/esrplunchtime/sliders/bar.jpg" %>
+  </div>
+  <div class="slide">
+    <%= image_tag "https://s3.amazonaws.com/esrplunchtime/sliders/bar2.jpg" %>
+  </div>
+  <div class="slide">
+    <%= image_tag "https://s3.amazonaws.com/esrplunchtime/sliders/chicken.jpg" %>
+  </div>
+  <div class="slide">
+    <%= image_tag "https://s3.amazonaws.com/esrplunchtime/sliders/restaurant.jpg" %>
+  </div>
+</div>
+
 <table class="table table-hover table-condensed">
   <thead>
     <tr>
@@ -36,3 +54,11 @@ Don't forget to leave reviews and ratings for your fellow foodies.
 
 
 <%= image_tag "https://s3.amazonaws.com/esrplunchtime/emp597.jpg", :class => "footer_image" %>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#slideshow").sliders({
+        interval: 5000
+      });
+  });
+</script>
