@@ -25,6 +25,7 @@
     }
     .navbar-brand {
         color: black;
+        float: right !important;
         font-size: 30px;
         font-weight: bold;
         font-family: 'Hobo Std';
@@ -35,6 +36,44 @@
 
 .navbar {
 margin-bottom:0 !important;
+}
+
+.navbar-default {
+    border-radius: 40px !important;
+}
+
+.navbar-nav {
+    float: left;
+    padding-left: 70px !important;
+}
+
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity:1;
+}
+
+.dropdown-menu {
+  opacity:.3;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1, 0);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+.caret-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
 }
 
 .container-fluid {
@@ -230,4 +269,56 @@ background-color: rgb(200, 200, 200);
   width: 40px;
   padding: 10px 0px 9px;
 }
+}
+
+
+
+#map {
+  height: 600px;
+  width: 900px;
+}
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+  color: #000;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+#target {
+  width: 345px;
 }

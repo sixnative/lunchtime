@@ -1,16 +1,16 @@
-<a href="/pages/about"></a>
+<a href="/pages/westchester"></a>
 
-
+<div class="row">
+  <div class="col-md-8">
   <input id="pac-input" class="controls" type="text" placeholder="Search Box">
   <div id="map"></div>
   <script>
     function initAutocomplete() {
       var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 40.748710, lng: -73.985656},
+        center: {lat: 41.029741, lng: -73.773908},
         zoom: 14,
         mapTypeId: 'roadmap'
       });
-
 
       var input = document.getElementById('pac-input');
       var searchBox = new google.maps.places.SearchBox(input);
@@ -44,7 +44,7 @@
           }
           var icon = {
             url: place.icon,
-            size: new google.maps.Size(71, 71),
+            size: new google.maps.Size(51, 51),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(17, 34),
             scaledSize: new google.maps.Size(25, 25)
@@ -67,7 +67,32 @@
         map.fitBounds(bounds);
       });
     }
-
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAINDFMDvbITIo5__B3SmyEGa9kgplsUGU&libraries=places&callback=initAutocomplete"
        async defer></script>
+     </div>
+     <div class="col-md-4">
+         <mark style="background:rgba(115,163,38,0.6)!important;font-size: 24px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);margin-left: 37%">Recommended</mark>
+       <% if @reviews.blank? %>
+         <h3></h3>
+       <% else %>
+       <table class="table" style="box-shadow: 0 4px 8px 0 rgba(172, 194, 116, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)">
+         <tbody>
+           <% @restaurants.each do |restaurant| %>
+             <tr>
+               <td>
+                 <%= restaurant.name %>
+                <%= restaurant.address %>
+                <%= restaurant.phone %>
+               <%= restaurant.website %>
+               </td>
+             </tr>
+           <% end %>
+         </tbody>
+       </table>
+       <% end %>
+     </div>
+
+     </div>
+<br><br>
+<%= link_to 'Back', restaurants_path, class: "btn btn-link" %>

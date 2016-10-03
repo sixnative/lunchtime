@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   resources :restaurants do
     collection do
       get 'search'
@@ -11,6 +10,12 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
+
+  get 'pages/manhattan'
+
+  get 'pages/fairfield'
+
+  get 'pages/westchester'
 
   root 'restaurants#index'
 

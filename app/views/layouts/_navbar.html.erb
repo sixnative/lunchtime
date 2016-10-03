@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation style="margin:0">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,8 +14,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li style="box-shadow: 0 4px 8px 0 rgba(172, 194, 116, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)"><%= link_to 'Add New Restaurant', new_restaurant_path, class: "btn btn-link" %></li>
-        <li></li>
+        <li style="margin-right:80px;box-shadow: 0 4px 8px 0 rgba(172, 194, 116, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)"><%= link_to 'Add New Restaurant', new_restaurant_path, class: "btn btn-link" %></li>
+        <li style="height:52px;box-shadow: 0 4px 8px 0 rgba(172, 194, 116, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8)" class="dropdown "><a href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button">Near Me<b class="caret"></b></a>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="drop1">
+                <li role="presentation"><a href="/pages/manhattan" role="menuitem">Manhattan</a></li>
+                <li role="presentation"><a href="/pages/fairfield" role="menuitem">Fairfield County</a></li>
+                <li role="presentation"><a href="/pages/westchester" role="menuitem">Westchester County</a></li>
+            </ul>
+        </li>
       </ul>
       <%= form_tag search_restaurants_path, method: :get, class: "navbar-form navbar-right" do %>
         <p>
@@ -23,8 +29,23 @@
           <%= submit_tag  "Search", name: nil, class: "btn btn-default" %>
         </p>
         <% end %>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<script>
+$(function(){
+$(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+            $(this).toggleClass('open');
+            $('b', this).toggleClass("caret caret-up");
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+            $(this).toggleClass('open');
+            $('b', this).toggleClass("caret caret-up");
+        });
+});
+</script>
